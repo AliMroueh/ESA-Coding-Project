@@ -1,0 +1,223 @@
+*{
+    -webkit-box-sizing : border-box;
+    -moz-box-sizing : border-box;
+    box-sizing : border-box;
+    padding: 0;
+    margin: 0;
+}
+:root{
+    --orange: #ffb03b;
+    --dark-black: #0c0b09; /*bck of the main page*/
+    --light-grey: rgba(255,255,255,0.8); /* color of card title */
+    --grey: #5f5950; /* color of contact */
+    --light-yellow: #cda45e; /* color of contact us */
+    --red-black: #1a1814; /* color of open section */
+    --dark-red: #ff6600; /* Day of the week */
+    --white-yellow: #ffcc99; /* number of hours open */
+    --transparent-black: rgba(26,24,22,0.85) /* bck of navbar when scrolled */
+
+}
+
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: white;
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+.navigator{
+    position: fixed;
+    width: 300px;
+    height: 100vh;
+    background: var(--red-black);
+    border-left: 10px solid var(--transparent-black);
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigator.active{
+    width: 80px;
+}
+.navigator ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navigator ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-bottom-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+.navigator ul li a{
+    position: relative;
+    display: flex;
+    width: 100%;
+    color: var(--orange);
+    text-decoration: none;
+}
+.navigator ul li:hover a{
+    background: white;
+    font-size: 1.5em;
+    color: var(--dark-red);
+    border-top-left-radius: 50%;
+}
+
+.navigator ul li:nth-child(1){
+    margin-bottom: 40px;
+    margin-top: 10px;
+    pointer-events: none;
+}
+.navigator ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 70px;
+    text-align: center;
+}
+.navigator ul li:nth-child(1) a h1{
+    font-family:"Times New Roman",serif;
+}
+.navigator ul li:nth-child(1) a .icon ion-icon{
+    font-size: 3em;
+    color: var(--light-yellow);
+}
+.navigator ul li a .icon ion-icon{
+    font-size: 1.75em;
+}
+.navigator ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}
+
+/* curve outside */
+
+.navigator ul li:hover a::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0px 10px white;
+}
+.navigator ul li:hover a::after{
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 35px -35px 0px 10px white;
+}
+
+/* Start main */
+.main{
+    position: absolute;
+    width: calc(100% - 300px);
+    left: 300px;
+    min-height: 100vh;
+    background: white;
+    transition: 0.5s;
+}
+.main.active{
+    width: calc(100% - 80px);
+    left: 80px;
+}
+
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5em;
+    cursor: pointer;
+}
+
+.search{
+    position: relative;
+    width: 400px;
+    margin: 0 10px;
+}
+
+.search label{
+    position: relative;
+    width: 100%;
+}
+
+.search label input{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    padding: 5px 20px;
+    padding-left: 35px;
+    outline: none;
+    font-size: 18px;
+    border: 1px solid var(--dark-black);
+}
+
+.search label ion-icon{
+    position: absolute;
+    top: 0;
+    left: 10px;
+    font-size: 1.2em;
+}
+/* End main */
+
+@media (max-width:991px){
+    .navigator{
+        left: -300px;
+    }
+    .main{
+        width: 100%;
+        left: 0;
+    }
+    .navigator.active{
+        left: 0;
+        width: 300px;
+    }
+    .main.active{
+        left: 300px;
+        width: calc(100% - 300px);
+    }
+}
+
+@media (max-width: 575px){
+    .navigator{
+        width: 100%;
+        left: -100%;
+        z-index: 100;
+    }
+    .navigator.active{
+        width: 100%;
+        left: 0;
+    }
+    .toggle{
+        z-index: 200;
+    }
+    .main.active{
+        color: white;
+    }
+}

@@ -1,16 +1,4 @@
-  //  show the items image
-
-  const addto = document.querySelector('.card .addto');
-  const item = document.querySelector('.item');
-  const closeItem = document.querySelector('.item i');
-
-  addto.onclick = () =>{
-    item.classList.toggle('active')
-  }
-  closeItem.onclick = () =>{
-    item.classList.remove('active')
-  }
-
+  console.log('hello')
     /**
    * Easy selector helper function
    */
@@ -58,4 +46,3 @@
      window.addEventListener('load', headerScrolled)
      onscroll(document, headerScrolled)
    }
-
