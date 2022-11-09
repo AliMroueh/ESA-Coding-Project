@@ -45,9 +45,6 @@
           <li><a class="nav-link scrollto active" href="#video">Home</a></li>
           <li><a class="nav-link scrollto" href="#open">Open</a></li>
           <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
-          <li><a class="nav-link scrollto" href=""><i class="bi bi-cart3"></i></a></li>
-          <li><a class="nav-link scrollto" href="#aboutus">About us</a></li>
-          <li><a class="nav-link scrollto" href="#services">Services</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         </ul>
@@ -71,7 +68,7 @@
 
 
     <!-- Start open section-->
-    <section class="open" id="open">
+    <div class="open" id="open">
         <div class="container">
             <div class="open-div">
                 <h2 class="primary open-title">Open</h2>
@@ -87,7 +84,7 @@
               </div>
             </div>
         </div>
-    </section>
+    </div>
     <!-- End open section-->
 
 
@@ -142,32 +139,19 @@
               <div class="card-body">
                 <h5 class="card-title">Card title</h5>
                 <h6>15 $</h6>
-                <div class="text-end">
-                  <button href="#" class="btn addto">+</button>
+                <a class="" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  Show Ingredient
+                </a> 
+                <div class="collapse" id="collapseExample">
+                  <p>
+                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.
+                  </p>
                 </div>
-              </div>
-            </div>
-
-            <div class="card filter-starters" style="width: 18rem; margin: 10px 0">
-              <img src="./assets/img/chefs-bg.jpg" class="card-img-top h-50 d-inline-block" alt="..." style="margin-top: 10px;">
-              <i class="bi bi-heart-fill love"></i>
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6>15 $</h6>
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
                 <div class="text-end">
-                  <button href="#" class="btn addto">+</button>
-                </div>
-              </div>
-            </div>
-
-            <div class="card filter-starters" style="width: 18rem; margin: 10px 0">
-              <img src="./assets/img/chefs-bg.jpg" class="card-img-top h-50 d-inline-block" alt="..." style="margin-top: 10px;">
-              <i class="bi bi-heart-fill love"></i>
-              <div class="card-body">
-                <h5 class="card-title">Card title</h5>
-                <h6>15 $</h6>
-                <div class="text-end">
-                  <button href="#" class="btn addto">+</button>
+                  <a href="#" class="btn btn-primary addto">+</a>
                 </div>
               </div>
             </div>
@@ -287,75 +271,6 @@ card's content.Some quick example text to build on the card title and make up th
       </section>
       <!-- End Menu Section -->
 
-      <!-- Start product image and detail  -->
-      <div class="item">
-        <div class="container">
-          <i class="bi bi-x-lg"></i>
-          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="Burger1.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="Burger2.jpg" class="d-block w-100" alt="...">
-              </div>
-              <div class="carousel-item">
-                <img src="addict1.jpg" class="d-block w-100" alt="...">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-          <div class="info">
-            <h1>Cheese Burger</h1>
-            <h3>15 $</h3>
-            <h2>Ingredients: </h2>
-            <form action="" class="checkbox">
-              <div>
-              <input type="checkbox" value="cheese" id="1" checked/>
-              <label for="1">cheese</label>
-            </div>
-            <div>
-              <input type="checkbox" value="cheese" id="2" checked/>
-              <label for="2">cheese</label>
-            </div>
-            <div>
-              <input type="checkbox" value="cheese" id="3" checked/>
-              <label for="3">cheese</label>
-            </div>
-            <div>
-              <input type="checkbox" value="cheese" id="4" checked/>
-              <label for="4">cheese</label>
-            </div>
-            <div>
-              <input type="checkbox" value="cheese" id="5" checked/>
-              <label for="5">cheese</label>
-            </div>
-            <div>
-              <input type="checkbox" value="cheese" id="6" checked/>
-              <label for="6">cheese</label>
-            </div>
-              <input type="submit" value="Add item"/>
-            </form>
-          </div>
-        </div>
-      </div>
-      <!-- End product image and detail -->
-
-      <!-- Start About Us -->
-      <!-- End About Us -->
-
       <!-- ======= Contact Section ======= -->
     <section id="contact" class="contact">
       <div class="container" data-aos="fade-up">
@@ -437,8 +352,7 @@ card's content.Some quick example text to build on the card title and make up th
         </div>
 
       </div>
-    </section>
-    <!-- End Contact Section -->
+    </section><!-- End Contact Section -->
     
     
       <!-- Vendor JS Files -->
@@ -449,10 +363,10 @@ card's content.Some quick example text to build on the card title and make up th
     <script src="assets/vendor/php-email-form/validate.js"></script> -->
 
     <!-- Template Main JS File -->
-    <script src="script.js"></script>
     <script src="assets/js/main.js"></script>
+    <!-- <script src="script.js"></script> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+
 </body>
 </html>
