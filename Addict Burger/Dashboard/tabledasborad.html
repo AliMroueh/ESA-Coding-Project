@@ -6,17 +6,102 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="tableDasbord.css"/>
 
-</head>
-<style>
-</style>
+    <link rel="stylesheet" href="tableDasbord.css"/>
+    
 </head>
 <body>
 
 <h2></h2>
 
 <table>
+
+    <div class="container">
+        <div class="navigator">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><ion-icon name="fast-food-sharp"></ion-icon></span>
+                        <h1 class="title">Addict Burger</h1>
+                    </a>
+                </li>
+                <li>
+                    <a href="DashboardUsers.html">
+                        <span class="icon"><ion-icon name="people-sharp"></ion-icon></span>
+                        <span class="title">Users</span>
+                    </a>
+                </li>
+                <li class="hovered">
+                    <a href="DashboardProducts.html">
+                        <span class="icon"><ion-icon name="pricetags"></ion-icon></span>
+                        <span class="title">Products</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="DashboardOrders.html">
+                        <span class="icon"><ion-icon name="receipt"></ion-icon></span>
+                        <span class="title">Orders</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="DashboardCategory.html">
+                        <span class="icon"><ion-icon name="apps"></ion-icon></span>
+                        <span class="title">Category</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="DashboardDelivery.html">
+                        <span class="icon"><ion-icon name="bicycle"></ion-icon></span>
+                        <span class="title">Delivery</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="DashboardTable.html">
+                        <span class="icon"><ion-icon name="tablet-landscape"></ion-icon></span>
+                        <span class="title">Table</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="DashboardStatistics.html">
+                        <span class="icon"><ion-icon name="stats-chart"></ion-icon></span>
+                        <span class="title">Statistics</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="DashboardProfile.html">
+                        <span class="icon"><ion-icon name="person-circle"></ion-icon></span>
+                        <span class="title">Profile</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- main -->
+
+        <div class="main">
+            <!-- Start topbar -->
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu"></ion-icon>
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+            </div>
+            <!-- End topbar -->
+            <!-- Start body -->
+                <div class="body">
+
+                </div>
+            </div>
+
+            <!-- End body -->
+        </div>
+    </div>
  <div class="container ">
         <div table class="tableAdmin">
             <tr>
@@ -156,7 +241,9 @@
         
         </table>
 </table>
-
+<script src="DashboardTable.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>
 
