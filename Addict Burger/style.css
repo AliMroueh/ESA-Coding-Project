@@ -283,9 +283,10 @@ video{
 /* Start About Us */
 .about-us {
     margin-top: 50px;
+
 }
 img{
-height: 80%;
+height: 100%;
 width: 100%;
 }
 #footor{
