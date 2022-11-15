@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>Document</title>
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="styleMobile.css">
+</head>
+<body>
+
+    <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <div class="logo me-auto">
+        <h1><a href="index.html">Addict Burger</a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#video">Home</a></li>
+          <li><a class="nav-link scrollto" href="#open">Open</a></li>
+          <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        </ul>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="#book-a-table" class="book-a-table-btn scrollto">Log In</a>
+
+    </div>
+  </header><!-- End Header -->
+
+    <!-- start video -->
+    <div id="video">
+        <video autoplay muted loop>
+            <source src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/rTl3vg0veiylgd0ih/videoblocks-close-up-of-food-garnishing-in-white-plate-waiter-serves-dish-at-table-famous-chef-preparing-style-dish-for-restaurant_rpwg8cfvb__af5ec35cf2e092b4649312aa3f818e2a__P360.mp4" type="video/mp4">
+            <source src="https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/rTl3vg0veiylgd0ih/videoblocks-close-up-of-food-garnishing-in-white-plate-waiter-serves-dish-at-table-famous-chef-preparing-style-dish-for-restaurant_rpwg8cfvb__af5ec35cf2e092b4649312aa3f818e2a__P360.mp4" type="video/ogg">
+            Your browser does not support the video tag.
+          </video>
+    </div>
+    <!-- End video -->
+
+
+    <!-- Start open section-->
+    <div class="open" id="open">
+        <div class="container">
+            <div class="open-div">
+                <h2 class="primary open-title">Open</h2>
+            </div>
+            <div class="open-date">
+              <div>
+                <h4>Monday - saterday</h4>
+                <h5>9:00 - 18:00</h5>
+              </div>
+              <div>
+                <h4>Sunday</h4>
+                <h5>Closed</h5>
+              </div>
+            </div>
+        </div>
+    </div>
+    <!-- End open section-->
+
+
+    <!-- ======= Menu Section ======= -->
+    <section id="menu" class="menu section-bg">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <h2>Menu</h2>
+            <p>Check Our Tasty Menu</p>
+          </div>
+
+          <div class="dropdown" id="dropdown" style="display: flex;
+          justify-content: center;
+          margin-bottom: 20px;">
+
+           <form class="d-flex me-1">
+            <input class="me-2" id="search" type="search" placeholder="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false" style="
+            color: #ffb03b;
+            background-color: #FFF;
+            border: 2px solid #ffb03b;
+        ">
+              Menu
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+              <li><a class="dropdown-item" href="#menu">Foods</a></li>
+              <li><a class="dropdown-item" href="#menu">Drinks</a></li>
+              <li><a class="dropdown-item" href="#menu">Special Offers</a></li>
+            </ul>
+          </div>
+  
+          <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-12 d-flex justify-content-center">
+              <ul id="menu-flters">
+                <li data-filter="*" class="filter-active">All</li>
+                <li data-filter=".filter-starters">Starters</li>
+                <li data-filter=".filter-salads">Salads</li>
+                <li data-filter=".filter-specialty">Specialty</li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="row row-cards" id="card" data-aos="fade-up" data-aos-delay="200">
+
+            <div class="card filter-starters" style="width: 18rem; margin: 10px 0">
+              <img src="./assets/img/chefs-bg.jpg" class="card-img-top h-50 d-inline-block" alt="..." style="margin-top: 10px;">
+              <i class="bi bi-heart-fill love"></i>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6>15 $</h6>
+                <a class="" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  Show Ingredient
+                </a> 
+                <div class="collapse" id="collapseExample">
+                  <p>
+                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.
+                  </p>
+                </div>
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                <div class="text-end">
+                  <a href="#" class="btn btn-primary addto">+</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card filter-starters" style="width: 18rem; margin: 10px 0">
+              <img src="./assets/img/chefs-bg.jpg" class="card-img-top h-50 d-inline-block" alt="..." style="margin-top: 10px;">
+              <i class="bi bi-heart-fill love"></i>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6>15 $</h6>
+                <a class="" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+                  Show Ingredient
+                </a> 
+                <div class="collapse" id="collapseExample1">
+                  <p>
+                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.
+                  </p>
+                </div>
+                <div class="text-end">
+                  <a href="#" class="btn btn-primary addto">+</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card filter-starters" style="width: 18rem; margin: 10px 0">
+              <img src="./assets/img/chefs-bg.jpg" class="card-img-top h-50 d-inline-block" alt="..." style="margin-top: 10px;">
+              <i class="bi bi-heart-fill love"></i>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6>15 $</h6>
+                <a class="" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+                  Show Ingredient
+                </a> 
+                <div class="collapse" id="collapseExample2">
+                  <p>
+                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.
+                  </p>
+                </div>
+                <div class="text-end">
+                  <a href="#" class="btn btn-primary addto">+</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card filter-starters" style="width: 18rem; margin: 10px 0">
+              <img src="./assets/img/chefs-bg.jpg" class="card-img-top h-50 d-inline-block" alt="..." style="margin-top: 10px;">
+              <i class="bi bi-heart-fill love"></i>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6>15 $</h6>
+                <a class="" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                  Show Ingredient
+                </a> 
+                <div class="collapse" id="collapseExample">
+                  <p>
+                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.
+                  </p>
+                </div>
+                <!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->
+                <div class="text-end">
+                  <a href="#" class="btn btn-primary addto">+</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card filter-starters" style="width: 18rem; margin: 10px 0">
+              <img src="./assets/img/chefs-bg.jpg" class="card-img-top h-50 d-inline-block" alt="..." style="margin-top: 10px;">
+              <i class="bi bi-heart-fill love"></i>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6>15 $</h6>
+                <a class="" data-bs-toggle="collapse" href="#collapseExample1" role="button" aria-expanded="false" aria-controls="collapseExample1">
+                  Show Ingredient
+                </a> 
+                <div class="collapse" id="collapseExample1">
+                  <p>
+                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.
+                  </p>
+                </div>
+                <div class="text-end">
+                  <a href="#" class="btn btn-primary addto">+</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="card filter-starters" style="width: 18rem; margin: 10px 0">
+              <img src="./assets/img/chefs-bg.jpg" class="card-img-top h-50 d-inline-block" alt="..." style="margin-top: 10px;">
+              <i class="bi bi-heart-fill love"></i>
+              <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <h6>15 $</h6>
+                <a class="" data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample2">
+                  Show Ingredient
+                </a> 
+                <div class="collapse" id="collapseExample2">
+                  <p>
+                    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+                    Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.Some quick example text to build on the card title and make up the bulk of the card's content.
+                  </p>
+                </div>
+                <div class="text-end">
+                  <a href="#" class="btn btn-primary addto">+</a>
+                </div>
+              </div>
+            </div>
+
+
+
+          </div>
+  
+        </div>
+      </section>
+      <!-- End Menu Section -->
+
+      <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact</h2>
+          <p>Contact Us</p>
+        </div>
+      </div>
+
+      <div data-aos="fade-up">
+        <iframe style="border:0; width: 100%; height: 350px;" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" allowfullscreen></iframe>
+      </div>
+
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>A108 Adam Street, New York, NY 535022</p>
+              </div>
+
+              <div class="open-hours">
+                <i class="bi bi-clock"></i>
+                <h4>Open Hours:</h4>
+                <p>
+                  Monday-Saturday:<br>
+                  11:00 AM - 2300 PM
+                </p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+1 5589 55488 55s</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="8" placeholder="Message" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+    
+    
+      <!-- Vendor JS Files -->
+    <!-- <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script> -->
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <!-- <script src="script.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>

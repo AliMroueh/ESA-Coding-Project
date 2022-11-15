@@ -1,0 +1,23 @@
+@media (max-width:575px){
+
+    /* Start open section */
+    .open-title:before, .open-title:after{
+        width: 31%
+    }
+    .open-title:before {
+        margin-left: -34%;
+    }
+    /* End Open section */
+    #card{
+        justify-content: center;
+    }
+
+    /* Start menu section */
+    #dropdown{
+        justify-content: space-between!important;
+        height: 105px;
+        margin-bottom: 20px!important;
+        flex-direction: column;
+    }
+    /* End menu section */
+}
