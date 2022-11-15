@@ -1,16 +1,4 @@
-*{
-    box-sizing: border-box;
-}
-body{
-    height:90vh;
-    width: 99%;
-    display: flex;
-   justify-content: center;
-   align-items: center;
-    margin-top: 10px;
-    background-color: rgb(245, 240, 250);
-   
-}
+
 
 table {
     border-collapse: collapse;
