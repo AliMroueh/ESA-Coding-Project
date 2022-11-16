@@ -34,6 +34,10 @@
  
 
 </head>
+<style>
+    ::placeholder{color:red;}
+  .remarq{display:none;color: red;}
+</style>
 <body>
   
 
@@ -45,34 +49,34 @@
        
       </div>
 
-      <form action="forms/book-a-table.php" method="post" role="form" class="php-email-form" data-aos="fade-up" data-aos-delay="100">
+      <form name="myform" role="form"  data-aos="fade-up" data-aos-delay="100">
         <div class="row">
           <div class="col-lg-3 col-md-6 form-group">
-            <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-            <div class="validate"></div>
+            <input type="text" name="fname" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            <p class="remarq">Please this is a required field</p>
           </div>
           <div class="col-lg-3 col-md-6 form-group mt-3 mt-md-0">
-            <input type="text" class="form-control" name="time" id="time" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-            <div class="validate"></div>
+            <input type="text" class="form-control" name="ftime" id="time" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            <p class="remarq">Please this is a required field</p>
             
           </div>
           <div class="col-lg-3 col-md-6 form-group mt-3 mt-md-0">
-            <input type="text" class="form-control" name="phone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-            <div class="validate"></div>
+            <input type="text" class="form-control" name="fphone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            <p class="remarq">Please this is a required field</p>>
           </div>
           <div class="col-lg-3 col-md-6 form-group mt-3 mt-md-0">
-            <input type="text" name="date" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-            <div class="validate"></div>
+            <input type="text" name="fdate" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            <p class="remarq">Please this is a required field</p>    <div class="validate"></div>
           </div>
           
         </div>
         <div class="form-group mt-3">
           <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
-          <div class="validate"></div>
+          
         </div>
        <br>
 
-        <div class="text-center"><button type="submit" style="border-radius:20px;border-color: rgb(223, 116, 17);"><a href="orderSummaryTakeaway.html">Process</a></button></div>
+       <div class="text-center" ><button type="button" style="border-radius:20px; border-color: rgb(223, 116, 17);outline:none;" id="btn">Process</button></div>
       </form>
 
     </div>
@@ -80,15 +84,12 @@
   </section><!-- End take away Section -->
 
  <!-- Vendor JS Files -->
- <script src="assets/vendor/aos/aos.js"></script>
+
  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
- <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
- <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
- <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
- <script src="assets/vendor/php-email-form/validate.js"></script>
+
 
  <!-- Template Main JS File -->
- <script src="assets/js/main.js"></script>
+ <script src="takeaway.js"></script>
 
 
   </body>

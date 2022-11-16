@@ -46,28 +46,27 @@
 <section id="delivery" class="delivery">
     <div class="container" data-aos="fade-up">
       <div class="section-title">
-        
         <h2>Delivery Address</h2>
       </div>
 
-      <form action="forms/action_page.php"  role="form" class="myform"  data-aos-delay="100" data-aos="fade-up" onsubmit="return validateForm()" method="post">
+      <form  role="form" name="myform"  data-aos-delay="100" data-aos="fade-up">
         <div class="row">
           <div class="col-lg-6 col-md-6 form-group">
             <input type="text" name="fname" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4">
-            
+            <p class="remarq">Please this is a required field</p>
           </div>
           <div class="col-lg-6 col-md-6 form-group mt-3 mt-md-0">
             <input type="text" class="form-control" name="ftime" id="time" placeholder="Time" data-rule="minlen:4" >
-            
+            <p class="remarq">Please this is a required field</p>
             
           </div>
           <div class="col-lg-6 col-md-6 form-group mt-3 ">
             <input type="text" class="form-control" name="fphone" id="phone" placeholder="Your Phone" data-rule="minlen:4" >
-          
+            <p class="remarq">Please this is a required field</p>
           </div>
           <div class="col-lg-6 col-md-6 form-group mt-3 ">
             <input type="text" name="fdate" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" >
-            
+            <p class="remarq">Please this is a required field</p>
           </div>
           <div class="col-lg-6 col-md-6 form-group mt-3 ">
                 <select id="fcity" class="fcity" style="padding:6px 12px;" id="book-a-table-btn:hover" name="fcity" >
@@ -78,11 +77,11 @@
                   <option value="item">Habboush</option>
                   <option value="item">Nsar</option>
                 </select>
-                
+                <p class="remarq">Please this is a required field</p>
           </div>
           <div class="col-lg-6 col-md-6 form-group mt-3 ">
             <input type="text" class="form-control" name="faddress" id="note" placeholder="Address" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
-          
+            <p class="remarq">Please this is a required field</p>
           </div>
 
         </div>
@@ -91,12 +90,12 @@
                   <hr>
                   <p>Total <span class="price" style="background-color: black; color:gray"><b></b></span></p>
            
-                
+                 
             
         </div>
        </div>
 
-        <div class="text-center" ><button type="submit" style="border-radius:20px;border-color: rgb(223, 116, 17);outline:none;""><a href="orderSummary.html">Process</a></button></div>
+        <div class="text-center" ><button type="button" style="border-radius:20px; border-color: rgb(223, 116, 17);outline:none;" id="btn">Process</button></div>
       
         <p class="remarq">Please this is a required field</p>
       </form>
