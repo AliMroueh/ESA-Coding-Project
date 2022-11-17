@@ -1,29 +1,86 @@
 const products = JSON.parse(localStorage.getItem('products'));
 const cats = JSON.parse(localStorage.getItem('category'));
+let searchInput = document.querySelector("[data-search]");
+let allProducts = document.getElementsByClassName('product');
 //   console.log(products)
 //   console.log(cats)
-      products.forEach((element,i) => {
-          let all = '';
-          for(x=0;x<element.ingredients.length;x++){
-              all += `<span class="oneIngrd">${element.ingredients[x]}</span>`;
-          }
-          document.querySelector('.body.products').insertAdjacentHTML("beforeend",
-              `<div class="product">
-                      <ion-icon class="edit" name="create-outline"></ion-icon>
-                      <ion-icon class="delete" name="trash-outline"></ion-icon>
-                      <img src="${element.images[0]}" alt="Burger1"/>
-                      <div class="info">
-                          <h2>${element.name}</h2>
-                          <span class="price">${element.price}<span>   L.L</span></span>
-                          <p class="MyIngred">
-                              ${all}
-                              </p>
-                          <p><span class="icon"><ion-icon name="receipt"></ion-icon></span> <span>${element.numOrders}</span> <span><ion-icon name="eye"></ion-icon></span> <span>${element.numReview}</span></p>
-                      </div>
-                  </div> `
-          )
-          
-      });
+searchInput.addEventListener('input', (e) => {
+  value = e.target.value.toLowerCase();
+  for(i=0;i<allProducts.length;i++){
+    if(allProducts[i].querySelector('.info h2').textContent.toLowerCase().includes(value)){
+      console.log(allProducts[i])
+    allProducts[i].classList.remove('hide')
+    }else{
+      console.log('no match')
+      allProducts[i].classList.add('hide')
+    }
+  }
+})
+
+products.map((element,i) => {
+    let all = '';
+    for(x=0;x<element.ingredients.length;x++){
+        all += 
+        element.ingredients[x].allowDeny ?
+        `<span class="oneIngrd activate">${element.ingredients[x].name}</span>`
+        : `<span class="oneIngrd">${element.ingredients[x].name}</span>`;
+    }
+    document.querySelector('.body.products').insertAdjacentHTML("beforeend",
+        `<div class="product">
+                <ion-icon class="edit" id="${element.id}" name="create-outline"></ion-icon>
+                <ion-icon class="delete" id="${element.id}" name="trash-outline"></ion-icon>
+                <img src="${element.images[0]}" alt="Burger1"/>
+                <div class="info">
+                    <h2>${element.name}</h2>
+                    <span class="price">${element.price}<span>   L.L</span></span>
+                    <div class="MyIngred">
+                        ${all}
+                        </div>
+                    <p><span class="icon"><ion-icon name="receipt"></ion-icon></span> <span>${element.numOrders}</span> <span><ion-icon name="eye"></ion-icon></span> <span>${element.numReview}</span>
+                    <span><ion-icon name="heart-circle"></ion-icon></span> <span>${element.love}</span>
+                    </p>
+                </div>
+            </div> `
+    )
+    
+});
+
+console.log(products);
+let newProducts = '';
+let allDelete = document.querySelectorAll('ion-icon.delete');
+let allEdit = document.querySelectorAll('ion-icon.edit');
+let bodyProducts = document.querySelector('.body.products')
+console.log(allDelete)
+
+for(i=0;i<allDelete.length;i++){
+  allDelete[i].addEventListener('click', (e)=>{
+    bodyProducts.insertAdjacentHTML('beforeend',
+    `<div class="approveDelete" id="approveDelete">
+    <div id="appDel">
+    <p>Delete <span id="itemName">Burger</span> Item?</p>
+    <div id="faithButton">
+        <span id="delete">Delete</span>
+        <span id="close">Close</span>
+    </div>
+</div>
+</div>`)
+document.getElementById('delete').addEventListener('click', () => {
+  newProducts = products.filter(element => element.id != e.target.id)
+  localStorage.setItem('products', JSON.stringify(newProducts))
+  location. reload()
+})
+
+document.getElementById('close').addEventListener('click', () => {
+  console.log(  document.getElementsByClassName('approveDelete'))
+  document.getElementById('approveDelete').remove();
+})
+  })
+  allEdit[i].addEventListener("click", (e)=>{
+    window.location.href = `DashboardEditProduct.html?id=${e.target.id}`;
+  })
+ 
+}
+
 
 // Admin select box
 const selector = document.querySelector('.container-body .top .category.food .selector');
@@ -54,6 +111,8 @@ li.forEach(element => {
       p.innerText = element.innerText;
       if(element.innerText == "Foods"){
         list_all.innerHTML = '';
+        list_all.insertAdjacentHTML('beforeend',`<li>All</li>`
+        )
         cats.food_cat.forEach(element => {
           list_all.insertAdjacentHTML('beforeend',`<li>${element}</li>`
       )
@@ -125,31 +184,6 @@ cats.food_cat.forEach(element => {
   
     bog(selector_admin_food_cat,down_admin_food_cat,up_admin_food_cat,list_admin_food_cat,li_admin_food_cat,p_admin_food_cat);
 
-   
-
-  function bog(one,two,three,four,five,sex){
-    one.onclick = () => {
-      // console.log(e.target)
-      two.classList.toggle('disabled');
-      three.classList.toggle('disabled');
-      four.classList.toggle('disabled');
-      console.log(Array.from(four.children)[1].innerText)
-      let new1 = document.querySelector('.container-body .top .category.admin-food-cat #list');
-    }
-    
-    five.forEach(element => {
-      element.onclick = (e) => {
-          sex.innerText = element.innerText;
-          two.classList.toggle('disabled');
-          three.classList.toggle('disabled');
-          four.classList.toggle('disabled'); 
-      }
-    });
-  }
-  
-
-
-
   // End Dashboard page
 
   // Start AddProductsPage 
@@ -164,9 +198,24 @@ console.log('hello')
   }
   // End AddProductsPage
 
-  // Start Delivery Page
-  // const addCountry = document.querySelector('.container-body #addCountry');
-  // addCountry.onclick = () => {
-  //   console.log('hello')
-  // }
-  // End Delivery Page
+
+
+function bog(one,two,three,four,five,sex){
+  one.onclick = () => {
+    // console.log(e.target)
+    two.classList.toggle('disabled');
+    three.classList.toggle('disabled');
+    four.classList.toggle('disabled');
+    console.log(Array.from(four.children)[1].innerText)
+    let new1 = document.querySelector('.container-body .top .category.admin-food-cat #list');
+  }
+  
+  five.forEach(element => {
+    element.onclick = (e) => {
+        sex.innerText = element.innerText;
+        two.classList.toggle('disabled');
+        three.classList.toggle('disabled');
+        four.classList.toggle('disabled'); 
+    }
+  });
+}

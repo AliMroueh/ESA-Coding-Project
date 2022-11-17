@@ -13,15 +13,16 @@
 
     const save_change = document.querySelector('.save_change');
 
-    console.log(all.food_cat)
-    console.log(all.drink_cat)
+    // console.log(all.food_cat)
+    // console.log(all.drink_cat)
     let add_span = (content,position) => {
         for(i=0;i<content.length;i++){
         position.innerHTML += `<li class="li">${content[i]}<span class="span">X</span></li>`;
     }
     }
+    if(all != null){
     add_span(all.food_cat,ul)
-    add_span(all.drink_cat,ul1)
+    add_span(all.drink_cat,ul1)}
     // for(x=0;x<all.drink_cat.length;x++){
     //     ul1.innerHTML += `<li class="li">${all.drink_cat[x]}<span class="span">X</span></li>`;
     // }
@@ -132,3 +133,107 @@
       navigator2.classList.toggle('active')
       main2.classList.toggle('active')
   }
+
+const saveItem = document.querySelector('.container-body.two #addItem');
+const itemName = document.getElementById('itemName');
+const price = document.getElementById('price');
+const bodyTwo = document.querySelector('.body.two');
+const add_item = document.getElementById('add-item');
+let is_not_exist = true;
+let name_not_exist = true;
+
+const delete_item = () => {
+  if(bodyTwo.children.length != 0){
+    let remove_span = (ul) =>{
+      if(ul.children.length != 0){
+        console.log(ul.children)
+          // loop through all li
+          for(i=0; i<ul.children.length; i++){
+              // delete the li ingredient when press on X span
+              ul.children[i].onclick = (e) => {
+                  if(e.target.innerText == 'X'){
+                    console.log(e.target.innerText)
+                      e.target.parentNode.remove();
+                  }
+          }
+      }
+    }
+    }
+    remove_span(bodyTwo);
+  }
+}
+
+let Extra = localStorage.getItem('extra');
+console.log(Extra)
+
+// get old data
+let old_data = JSON.parse(localStorage.getItem("extra"));
+console.log(old_data)
+
+if(old_data){
+old_data.forEach(element => bodyTwo.insertAdjacentHTML('beforeend', 
+`<div class="country_flex">
+<p id="country_name">${element.productName}</p>
+<p>${element.productPrice}</p>
+<p class="close">X</p>
+</div>`
+))
+}
+
+delete_item();
+
+
+const check_before_add = () => {
+  if(bodyTwo.children.length != 0){
+    for(i=0;i<bodyTwo.children.length;i++){
+      if(bodyTwo.children[i].children[0].innerText.toLowerCase() == itemName.value.trim().toLowerCase()){
+        is_not_exist = false;
+        break;
+      }else{
+        is_not_exist = true;
+      }
+    }
+  }
+
+  if(!itemName.value.trim()){
+    alert('Please Enter The Item Name') 
+  }else if(!price.value.trim()){
+  alert('Please Enter The Item Price')
+  }else if(bodyTwo.children.length != 0 && is_not_exist || bodyTwo.children.length == 0 ){
+    bodyTwo.insertAdjacentHTML('beforeend' , 
+  `<div class="country_flex">
+  <p id="country_name">${itemName.value}</p>
+  <p>${price.value}</p>
+  <p class="close">X</p>
+  </div>`
+  )
+  }else{
+    alert("Item Name already exists") 
+  }
+  // console.log(bodyTwo.children[0].children[0].innerText)
+
+  itemName.value = '';
+  price.value = '';
+  delete_item();
+}
+
+add_item.addEventListener('click' , check_before_add);
+
+saveItem.onclick = () => {
+
+let arr = [];
+let del = {
+productName: itemName.value,
+productPrice: price.value
+};
+
+  for(i=0;i<bodyTwo.children.length;i++){
+    del = {
+        productName: bodyTwo.children[i].children[0].innerText,
+        productPrice: bodyTwo.children[i].children[1].innerText
+      };
+    arr.push(del)
+  }
+  localStorage.setItem("extra", JSON.stringify(arr))
+
+}

@@ -57,7 +57,7 @@ delete_item();
 const check_before_add = () => {
   if(bodyTwo.children.length != 0){
     for(i=0;i<bodyTwo.children.length;i++){
-      if(bodyTwo.children[i].children[0].innerText == country.value.trim()){
+      if(bodyTwo.children[i].children[0].innerText.toLowerCase() == country.value.trim().toLowerCase()){
         is_not_exist = false;
         break;
       }else{

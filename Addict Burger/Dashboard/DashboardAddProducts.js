@@ -10,7 +10,13 @@
   }
 
 let all = JSON.parse(localStorage.getItem("category"));
-console.log(all)
+let ext = JSON.parse(localStorage.getItem("extra"));
+// if(all == null){
+//   console.log('not exit')
+//   window.location.replace("file:///C:/Users/MYCOM/Desktop/Esa%20coding%20files/Addict%20Burger/Dashboard/DashboardCategory.html");
+// }
+// console.log(all)
+console.log(ext)
 const btn = document.querySelector(".container-body .form form .addIngrd button");
 const txt = document.querySelector(".container-body .form form .addIngrd input");
 let typeCategories = document.querySelector('.typeCategories');
@@ -28,7 +34,7 @@ if(txt.value.trim() != ''){
 if(lii.length != 0){
     // check if there is common name in the li 
     for(i=0;i<lii.length;i++){
-        if(lii[i].innerText.slice(0,lii[i].innerText.indexOf('X')) != txt.value.trim()){
+        if(lii[i].innerText.slice(0,lii[i].innerText.indexOf('Allow')).toLowerCase() != txt.value.trim().toLowerCase()){
             not_exist = true;
         }else{
             not_exist = false;
@@ -39,7 +45,7 @@ if(lii.length != 0){
     // if there is no common then add it
         if(not_exist){
             // add li to ul
-        ul.innerHTML += `<li class="li">${txt.value}<span class="span">X</span></li>`;
+            ul.innerHTML += `<li class="li">${txt.value}<span>Allow Deny</span><span class="span">X</span></li>`;
         // clean the txt
         txt.value = '';
         }else{
@@ -47,7 +53,7 @@ if(lii.length != 0){
         }
     }else{
         // add li to ul
-        ul.innerHTML += `<li class="li">${txt.value}<span class="span">X</span></li>`;
+        ul.innerHTML += `<li class="li">${txt.value}<span>Allow Deny</span><span class="span">X</span></li>`;
         // clean the txt
         txt.value = '';
     }
@@ -61,6 +67,9 @@ if(del.children.length != 0){
         del.children[i].onclick = (e) => {
             if(e.target.innerHTML == 'X'){
                 e.target.parentNode.remove();
+            }else if(e.target.innerHTML == 'Allow Deny'){
+              // toggle for allow to deny the item in the cart item menu
+              e.target.classList.toggle('activate')
             }
     }
 }
@@ -128,39 +137,93 @@ element.onclick = (e) => {
 }
 
 let fileInput = document.getElementById('file-input');
-let imageContainer = document.getElementById('images');
 let numOfFiles = document.getElementById('num-of-files');
+let button = document.getElementById('button');
 
 //   Start function for images
+// const preview = () =>{
+// // empty imageContainer
+// imageContainer.innerHTML = "";
+// // check if there is more than 4 images
+// if(fileInput.files.length > 4 ){
+// alert('You can not choose more than 4 images')
+// }else{
+// numOfFiles.textContent = `${fileInput.files.length} Files Selected`;
+
+// for(i of fileInput.files){
+// let reader = new FileReader();
+// let figure = document.createElement("figure");
+// let figCap = document.createElement("figcaption");
+
+// figCap.innerText = i.name;
+// figure.appendChild(figCap);
+// reader.onload = () => {
+//     let img = document.createElement("img");
+//     img.setAttribute("src", reader.result);
+//     // insert img before figCap
+//     figure.insertBefore(img, figCap);
+// }
+// imageContainer.appendChild(figure);
+// // readAsDataURL(blob) – read the binary data and encode it as base64 data url.
+// reader.readAsDataURL(i);
+// console.log(imageContainer)
+// }
+// }
+// }
+
 const preview = () =>{
-// empty imageContainer
-imageContainer.innerHTML = "";
-// check if there is more than 4 images
-if(fileInput.files.length > 4 ){
-alert('You can not choose more than 4 images')
-}else{
-numOfFiles.textContent = `${fileInput.files.length} Files Selected`;
+  let imageContainer = document.getElementById('images');
+  // empty imageContainer
+  // delete the images if exists
+  if(imageContainer){
+    imageContainer.remove()
+  }
+  
+  // check if there is more than 4 images
+  if(fileInput.files.length > 4 ){
+  alert('You can not choose more than 4 images')
+  }else if(fileInput.files.length == 0){
+    // put the number of images selected
+    numOfFiles.textContent = `${fileInput.files.length} Files Selected`;
+    // delete the images if exists
+    if(imageContainer){
+      imageContainer.remove()
+    }
+  }else{
 
-for(i of fileInput.files){
-let reader = new FileReader();
-let figure = document.createElement("figure");
-let figCap = document.createElement("figcaption");
+  numOfFiles.textContent = `${fileInput.files.length} Files Selected`;
 
-figCap.innerText = i.name;
-figure.appendChild(figCap);
-reader.onload = () => {
-    let img = document.createElement("img");
-    img.setAttribute("src", reader.result);
-    // insert img before figCap
-    figure.insertBefore(img, figCap);
-}
-imageContainer.appendChild(figure);
-// readAsDataURL(blob) – read the binary data and encode it as base64 data url.
-reader.readAsDataURL(i);
-console.log(imageContainer)
-}
-}
-}
+  let x=0;
+  let images = document.createElement('div');
+  images.id = 'images';
+  let slider = document.createElement('div');
+  slider.className = 'slider';
+
+  for(i=0;i<fileInput.files.length;i++){
+
+  let reader = new FileReader();
+
+  reader.onload = () => {
+    x++;
+
+    if(fileInput.files.length == 1 ){
+      slider.insertAdjacentHTML('beforeend', `
+      <span><img src="${reader.result}" alt=""></span>
+      `)
+    }else{
+    slider.insertAdjacentHTML('beforeend', `
+    <span style="transform: rotateY(calc(${x}* ${360/fileInput.files.length}deg)) translateZ(200px);"><img src="${reader.result}" alt=""></span>
+    `)
+    }
+  }
+  // readAsDataURL(blob) – read the binary data and encode it as base64 data url.
+  reader.readAsDataURL(fileInput.files[i]);
+  }
+  images.appendChild(slider);
+  button.insertAdjacentElement('beforebegin', images)
+
+  }
+  }
 
 //   End function for images
 
@@ -171,16 +234,20 @@ let Price = document.getElementById('ProductPrice').value;
 let AddProduct = document.getElementById('AddProduct');
 let ingredients = document.getElementById('ingredients');
 let Category = document.querySelector('#addItem p').innerHTML;
-let Allimages = document.querySelectorAll('#images figure img');
+// let Allimages = document.querySelectorAll('#images figure img');
+let Allimages = document.querySelectorAll('#images .slider span img');
 let name_not_exist = true;
 let radioButtons = document.querySelectorAll('.typeCategories input[name="category"]');
 var ischecked = false;
+let typeExtra = document.querySelector('.typeExtra');
+let catType = '';
 // check the data if they are good
 
 // check if type of category is chosen
   for(const radioButton of radioButtons){
     if(radioButton.checked==true){
         ischecked = true;
+        catType = radioButton.value;
     }
 }
 
@@ -197,24 +264,50 @@ alert("Please Enter The category type")
 }else if(Allimages.length == 0){
 alert("Please Enter The Item's Images")
 }else{
+let eachIngreds = {
+  name: '',
+  allowDeny: ''
+}
 let ingredients_li = [];
 let Images = [];
+let check = false;
+theExtras = [];
 
 for(i=1;i<=ingredients.children.length;i++){
-ingredients_li.push(ingredients.childNodes[i].innerHTML.slice(0,ingredients.childNodes[i].innerHTML.indexOf('<span')))
+  console.log(ingredients.childNodes[i].innerHTML);
+  check = ingredients.childNodes[i].innerHTML.includes('activate');
+  console.log(check);
+  eachIngreds.allowDeny = check;
+  eachIngreds.name = ingredients.childNodes[i].innerHTML.slice(0,ingredients.childNodes[i].innerHTML.indexOf('<span'));
+  ingredients_li.push({name:ingredients.childNodes[i].innerHTML.slice(0,ingredients.childNodes[i].innerHTML.indexOf('<span')),
+allowDeny:check})
 }
+
+if(typeExtra.children.length > 0){
+  for(i=1;i<=typeExtra.children.length;i++){
+    console.log(typeExtra.childNodes[i].innerHTML.slice(0,typeExtra.childNodes[i].innerHTML.indexOf('<span>')));
+    console.log(typeExtra.childNodes[i].innerHTML.slice(typeExtra.childNodes[i].innerHTML.indexOf('>')+1,typeExtra.childNodes[i].innerHTML.indexOf('</span>')))
+    theExtras.push({name: typeExtra.childNodes[i].innerHTML.slice(0,typeExtra.childNodes[i].innerHTML.indexOf('<span>')),
+  price: typeExtra.childNodes[i].innerHTML.slice(typeExtra.childNodes[i].innerHTML.indexOf('>')+1,typeExtra.childNodes[i].innerHTML.indexOf('</span>'))})
+
+  }
+}
+
 for(x=0;x<Allimages.length;x++){
 Images.push(Allimages[x].src)
 }
 
 let obj={
+id: new Date().valueOf(),
 name: Name,
 price: Price,
 ingredients: ingredients_li,
-category:Category,
+category:{name:Category,type:catType},
+extras:theExtras,
 images: Images,
 numReview: 0,
-numOrders: 0
+numOrders: 0,
+love: 0
 };
 
 // if there is no save at start then save an empty array
@@ -239,8 +332,82 @@ if(name_not_exist){
     // save the old + new data to local storage
     let new_data = JSON.stringify(old_data);
     localStorage.setItem("products",new_data);
-    location.reload();
+    // location.reload();
 }
 
 }
 }
+
+
+// Admin select box
+const selector_extra = document.querySelector('.container-body .top .category.extra .selector');
+const p_extra = document.querySelector('.container-body .top .category.extra .selector p');
+const down_extra = document.querySelector('.container-body .top .category.extra .selector .down');
+const up_extra = document.querySelector('.container-body .top .category.extra .selector .up');
+const list_extra = document.querySelector('.container-body .top .category.extra #list');
+const li_extra = document.getElementsByClassName('li');
+let is_not_exist1 = false;
+let typeExtra = document.querySelector('.typeExtra');
+
+// add extra to li
+for(i=0;i<ext.length;i++){
+    list_extra.insertAdjacentHTML('beforeend',
+    `<li class="li" data-price="${ext[i].productPrice}">${ext[i].productName}</li>`
+    )
+}
+
+if(li_extra){
+    bog1(selector_extra,down_extra,up_extra,list_extra,li_extra,p_extra);
+}
+
+
+// choose food categories
+function bog1(one,two,three,four,five,sex){
+one.onclick = (e) => {
+two.classList.toggle('disabled');
+three.classList.toggle('disabled');
+four.classList.toggle('disabled');
+}
+
+Array.from(five).forEach(element => {
+element.onclick = (e) => {
+  two.classList.toggle('disabled');
+  three.classList.toggle('disabled');
+  four.classList.toggle('disabled'); 
+  if(typeExtra.children.length != 0){
+    del();
+    for(i=0;i<typeExtra.children.length;i++){
+        is_not_exist1 = typeExtra.children[i].innerHTML.includes(element.innerText);
+        console.log(typeExtra.children[i].getElementsByClassName('cursor'))      
+        if(is_not_exist1 == true){
+            break;
+        }
+      }
+      !is_not_exist1 && typeExtra.insertAdjacentHTML('beforeend', 
+      `<p class="flexExtra">${element.innerText}<span>${element.dataset.price}</span><span class="cursor">X</span></p>`
+      )
+
+  }else{
+    typeExtra.insertAdjacentHTML('beforeend', 
+  `<p class="flexExtra">${element.innerText}<span>${element.dataset.price}</span><span class="cursor">X</span></p>`
+  )
+  }
+del()
+}
+});
+}
+function del(){
+  let cur = document.getElementsByClassName('cursor')
+  for(i=0;i<cur.length;i++){
+    cur[i].addEventListener('click',(e) => {
+      if(e.target.innerText == 'X'){
+          console.log(cur.length)
+          e.target.parentNode.remove()
+          console.log(cur.length)
+      }
+    }
+    )
+  }
+}
+del()
+

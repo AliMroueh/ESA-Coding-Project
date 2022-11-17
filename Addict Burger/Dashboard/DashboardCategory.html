@@ -23,7 +23,7 @@
                         <span class="title">Users</span>
                     </a>
                 </li>
-                <li class="hovered">
+                <li>
                     <a href="DashboardProducts.html">
                         <span class="icon"><ion-icon name="pricetags"></ion-icon></span>
                         <span class="title">Products</span>
@@ -35,7 +35,7 @@
                         <span class="title">Orders</span>
                     </a>
                 </li>
-                <li>
+                <li class="hovered">
                     <a href="DashboardCategory.html">
                         <span class="icon"><ion-icon name="apps"></ion-icon></span>
                         <span class="title">Category</span>
@@ -118,6 +118,21 @@
             </div>
             <!-- End body -->
             <button class="btn save_change">Save Changes</button>
+        </div>
+        <div class="container-body two">
+            <h1 class="title">Extra</h1>
+            <form action="">
+                <div class="country-grid">
+                <input id="itemName" class="input" type="text" placeholder="Item" required>
+                <input id="price" class="input" type="number" placeholder="Price" min="0" required>
+                <input type="button" id="add-item" value="Add item" class="btn">
+            </div>
+            <div class="body two">
+                
+            </div>
+
+            <button type="button" class="btn" id="addItem">Save Change</button>
+        </form>
         </div>
     </div>     
     <script src="DashboardCategory.js"></script>

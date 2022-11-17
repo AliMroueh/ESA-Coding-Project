@@ -12,6 +12,7 @@
     --red-black: #1a1814; /* color of open section */
     --dark-red: #ff6600; /* Day of the week */
     --white-yellow: #ffcc99; /* number of hours open */
+    --cheese:#ffa600;
     --transparent-black: rgba(26,24,22,0.85) /* bck of navbar when scrolled */
 }
 
@@ -79,28 +80,79 @@ video{
 /* Start open section */
 .open{
     position: absolute;
-    top: 527px;
-    right: 17px;
+    top: 152px;
+    border-radius: 10px;
+    right: 99px;
     font-family: 'Playfair Display',Georgia,"Times New Roman",serif;
-    background-color: transparent;
+    /* background-color: transparent; */
     text-align: center;
     padding: 50px 0;
+    animation-name: changeColor;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes changeColor{
+    0%{
+        background-color: #0c0b09;
+        opacity: 0.1;
+    }
+    10%{
+        background-color: #0c0b09;
+        opacity: 0.3;
+    }
+    20%{
+        background-color: #0c0b09;
+        opacity: 0.5;
+    }
+    30%{
+        background-color: #0c0b09;
+        opacity: 0.7;
+    }
+    40%{
+        background-color: #0c0b09;
+        opacity: 0.9;
+    }
+    50%{
+        background-color: #0c0b09;
+        opacity: 1;
+        transform: scale(1.5)
+    }
+    60%{
+        background-color: #0c0b09;
+        opacity: 0.8;
+    }
+    70%{
+        background-color: #0c0b09;
+        opacity: 0.6;
+    }
+    80%{
+        background-color: #0c0b09;
+        opacity: 0.4;
+    }
+    90%{
+        background-color: #0c0b09;
+        opacity: 0.2;
+    }
+    100%{
+        background-color: #0c0b09;
+        opacity: 0.1;
+    }
 }
 .open-div{
     position: relative;
 }
 .open-title:before{
-        margin-left: -53%;
+        margin-left: -35%;
         text-align: right;
 }
 .open-title:after{
-    margin-left: 3%;
+    margin-left: 7%;
 }
 .open-title:before, .open-title:after{
     position: absolute;
     top: 49%;
     overflow: hidden;
-    width: 50%;
+    width: 30%;
     height: 1px;
     content: '';
     background-color: rgba(227,143,36,0.51);
@@ -196,14 +248,16 @@ video{
 }
 
 .love{
-    color: red;
+    color: #5b4f51;
     position: absolute;
     right: 20px;
     top: 20px;
     font-size: 23px;
     cursor: pointer;
 }
-
+.active_love{
+    color: red;
+}
 .addto{
     background-color: var(--orange);
     color: white;
@@ -218,6 +272,13 @@ video{
     height: 2.5em;
     color: white;
     cursor: pointer;
+}
+#quantityNumber{
+    width: 100px;
+    align-self: center;
+    border-radius: 10px;
+    border: 1px solid var(--cheese);
+    outline: none;
 }
 /* End menu section */
 

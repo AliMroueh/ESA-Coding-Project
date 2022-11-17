@@ -18,6 +18,9 @@
     --cheese:#ffa600;
     --transparent-black: rgba(26,24,22,0.85) /* bck of navbar when scrolled */
 }
+.cursor{
+    cursor: pointer;
+}
 .btn{
     width: 100%;
     margin: 10px 0;
@@ -49,6 +52,9 @@ body{
     min-height: 100vh;
     overflow-x: hidden;
     background: white;
+}
+.hide{
+    display: none !important;
 }
 .container{
     position: relative;
@@ -252,12 +258,9 @@ body{
 .container-body .top .category{
     position: relative;
     width: fit-content;
+    margin-right: 10px;
 }
-.container-body .top .category{
-    position: relative;
-    width: fit-content;
-}
-.container-body .top .category.admin-food-cat{
+.container-body .top .category.AddProduct{
     width: 100%;
 }
 .container-body .top .selector{
@@ -321,6 +324,7 @@ body{
     border-radius: 10px;
     cursor: pointer;
     text-align: center;
+    transition: 1s;
 }
 .container-body .top #list li:hover{
     font-size: 1.2em;
@@ -395,7 +399,7 @@ body{
     width: fit-content;
     padding: 8px;
     margin-bottom: 10px;
-    margin-left: 10px;
+    margin-right: 10px;
     overflow-wrap: break-word;
 }
 .ingrds-div .ingrds-ul.cats li{
@@ -403,9 +407,6 @@ body{
     justify-content: space-between;
     margin-left: 0;
     width: 100%;
-}
-.ingrds-div .ingrds-ul li:first-child{
-    margin-left: 0;
 }
 .ingrds-div .ingrds-ul li span{
     margin-left: 26px;
@@ -438,7 +439,64 @@ body{
 #images figure img{
     width: 100%;
 }
-
+.activate{
+    background-color: green !important;
+}
+.flexExtra{
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+    background-color: var(--cheese);
+    color: white;
+    padding: 5px;
+}
+#images{
+    background: linear-gradient(to right, var(--orange), var(--cheese));
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 100px 0 50px 0;
+}
+.slider{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: rotate 30s linear infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: perspective(1000px) rotateY(0deg);
+    }
+    100%{
+        transform: perspective(1000px) rotateY(360deg);
+    }
+}
+.slider span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    /* transform: rotateY(calc(var(--i)*90deg)) translateZ(200px); */
+}
+.slider span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: 2s;
+}
+.slider span:hover img{
+    transform: translateY(-50px) scale(1.2);
+}
 /* End Add Product */
 /* Start User */
 .user{
@@ -481,6 +539,7 @@ body{
     padding: 5px;
     display: flex;
     position: relative;
+    min-height: 211px;
 }
 .product .edit, .product .delete{
     font-size: 26px;
@@ -490,11 +549,11 @@ body{
 }
 .product .edit{
     right: 35px;
-    color: blue;
+    color: rgba(0,0,255,0.7);
 }
 .product .delete{
     right: 4px;
-    color: red;
+    color: #f44336;
 }
 .product .edit:hover{
     font-size: 30px;
@@ -519,15 +578,84 @@ body{
     justify-content: space-between;
     width: 50%;
 }
-.product .info p{
+.product .info div{
     word-break: break-all;
     white-space: normal;
 }
-.product .info p .oneIngrd{
+.product .info div .oneIngrd{
     background-color: var(--cheese);
     color: black;
     margin: 3px;
-    padding: 3px;
+}
+.approveDelete{
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(255, 166, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.approveDelete #appDel{
+    border-radius: 10px;
+    background-color: var(--orange);
+    height: 35%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+}
+.approveDelete #appDel p{
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+.approveDelete #appDel p #itemName{
+    color: var(--grey);
+    font-size: 1.1em;
+    text-shadow: 2px 3px 3px white;
+}
+.approveDelete div div{
+    display: flex;
+    justify-content: space-between;
+}
+.approveDelete div div span#close:before{
+    /* content: '\274C'; */
+}
+.approveDelete div div span#delete:before{
+    /* content: '\1F5D1'; */
+}
+.approveDelete #appDel #faithButton span{
+    background-color: #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    width: 49%;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.8s;
+}
+.approveDelete #appDel #faithButton span#close{
+    background-color: white;
+    color: var(--cheese);
+}
+.approveDelete #appDel #faithButton span#close:hover{
+    background-color: var(--dark-red);
+    color: white;
+    cursor: pointer;
+}
+
+.approveDelete #appDel #faithButton span#delete{
+    background-color: #f44336;
+    color: white;
+}    
+.approveDelete #appDel #faithButton span#delete:hover{
+    background-color: #ec1809;
+    cursor: pointer;
 }
 
 /* End Product */
@@ -562,7 +690,49 @@ body{
 }
 
 /* End Delivery Dashboard */
-/* */
+
+/* Start Profile Dashboard */
+.email_required{
+    color: red;
+    font-weight: 700;
+    display: none;
+}
+.password_required{
+    display: none;
+}
+.password_required ul{
+    padding: 0;
+    margin: 0 0 15px;
+    list-style: none;
+}
+.password_required ul li{
+    margin-bottom: 8px;
+    color: red;
+    font-weight: 700;
+}
+.password_required ul li.active{
+    color: #02af02;
+}
+.password_required ul li span:before{
+    content: '\274C';
+}
+.password_required ul li.active span:before{
+    content: '\2705';
+}
+.signOut{
+    border-radius: 10px;
+    background-color: var(--cheese);
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 10px 15px;
+}
+.signOut:hover{
+    opacity: 0.6;
+}
+/* End Profile Dashboard */
 /* End main */
 
 
@@ -643,5 +813,12 @@ body{
     }
     .product img{
         width: 100%;
+    }
+    .container-body .top {
+        flex-direction: column;
+        height: 100px;
+    }
+    .container-body .form form {
+        width: 90%;
     }
 }

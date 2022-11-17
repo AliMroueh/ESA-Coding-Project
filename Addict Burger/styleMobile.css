@@ -1,5 +1,13 @@
 @media (max-width:575px){
 
+    #video{
+        height: 100vh;
+        background-color: rgba(255,166,0,0.5);
+    }
+    video{
+        height: 100vh;
+    }
+
     /* Start open section */
     .open-title:before, .open-title:after{
         width: 31%
@@ -15,6 +23,8 @@
         width: 100%;
         text-align: center;
         padding: 50px 0;
+        animation-name: none;
+        border-radius: 0;
     }
     #card{
         justify-content: center;
