@@ -1,8 +1,6 @@
 
 
 
-
-
 document.getElementById("btn").onclick = () =>
 {
     let First =document.forms["myform"]["fname"].value;
