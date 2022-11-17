@@ -612,28 +612,18 @@ body{
     margin: 3px;
 }
 .approveDelete{
-<<<<<<< Updated upstream
-    position: absolute;
-=======
     position: fixed;
->>>>>>> Stashed changes
     z-index: 10;
     background-color: rgba(255, 166, 0, 0.5);
     width: 100%;
     height: 100%;
-<<<<<<< Updated upstream
-=======
     left: 0;
->>>>>>> Stashed changes
     top: 0;
     bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-<<<<<<< Updated upstream
-=======
     transition: 1s;
->>>>>>> Stashed changes
 }
 .approveDelete #appDel{
     border-radius: 10px;
@@ -851,17 +841,12 @@ body{
     .product img{
         width: 100%;
     }
-<<<<<<< Updated upstream
-    .container-body .top {
-        flex-direction: column;
-=======
     .Add-item{
         margin-top: 22px;
     }
     .container-body .top {
         flex-direction: column;
         align-items: center;
->>>>>>> Stashed changes
         height: 100px;
     }
     .container-body .form form {

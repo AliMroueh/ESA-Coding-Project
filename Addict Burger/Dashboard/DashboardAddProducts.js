@@ -332,7 +332,7 @@ if(name_not_exist){
     // save the old + new data to local storage
     let new_data = JSON.stringify(old_data);
     localStorage.setItem("products",new_data);
-    // location.reload();
+    window.location.href = "DashboardProducts.html";
 }
 
 }
