@@ -1,7 +1,13 @@
 const products = JSON.parse(localStorage.getItem('products'));
 let oneProduct = '';
+<<<<<<< Updated upstream
 let pId = window.location.href.slice(window.location.href.indexOf('id=')+3, window.location.href.lastIndexOf('%'));
 
+=======
+// let pId = window.location.href.slice(window.location.href.indexOf('id=')+3, window.location.href.lastIndexOf('%'));
+let pId = window.location.href.slice(window.location.href.indexOf('id=')+3);
+console.log(pId)
+>>>>>>> Stashed changes
 oneProduct = products.filter(e => e.id == pId)
 
 let Name = document.getElementById('ProductName');
@@ -452,6 +458,7 @@ localStorage.setItem("products", '[]');
 // get old data
 let old_data = JSON.parse(localStorage.getItem("products"));
 // loop through old data and check if the name is already exist
+<<<<<<< Updated upstream
 for(y=0;y<old_data.length;y++){
 if(old_data[y].name == obj.name){
    alert(`${obj.name} already exists`);
@@ -459,6 +466,15 @@ if(old_data[y].name == obj.name){
    break;
 }
 }
+=======
+// for(y=0;y<old_data.length;y++){
+// if(old_data[y].name == obj.name){
+//    alert(`${obj.name} already exists`);
+//    name_not_exist = false;
+//    break;
+// }
+// }
+>>>>>>> Stashed changes
 
 // if the name is not already exist then add it to local storage or data base
 if(name_not_exist){
@@ -467,6 +483,7 @@ if(name_not_exist){
     // save the old + new data to local storage
     let new_data = JSON.stringify(old_data);
     localStorage.setItem("products",new_data);
+<<<<<<< Updated upstream
     // location.reload();
 }
 
@@ -474,6 +491,26 @@ if(name_not_exist){
 }
 
 
+=======
+    let container_body = document.querySelector('.container-body');
+    container_body.insertAdjacentHTML("beforeend", 
+    `<div class="approveDelete" id="approveDelete">
+    <div id="appDel">
+    <p><span id="itemName">${obj.name}</span> has been updated successfully.</p>
+</div>
+</div>`)
+setTimeout(function() {
+      window.location.href = "DashboardProducts.html"
+    }, 2000);
+}
+
+}
+
+}
+
+
+
+>>>>>>> Stashed changes
 // Admin select box
 const selector_extra = document.querySelector('.container-body .top .category.extra .selector');
 const p_extra = document.querySelector('.container-body .top .category.extra .selector p');

@@ -336,6 +336,7 @@ body{
     grid-column-gap: 10px;
     grid-row-gap: 10px;
     margin-right: 10px;
+    padding: 10px;
 }
 /* Start Add Product */
 .container-body .form{
@@ -500,7 +501,7 @@ body{
 /* End Add Product */
 /* Start User */
 .user{
-    background-color: var(--light-yellow);
+    background-color: var(--white-yellow);;
     border-radius: 10px;
     padding: 10px;
 }
@@ -529,6 +530,29 @@ body{
 #ontable{
     color: brown;
     font-weight: bold;
+}
+.flex#btns{
+    justify-content: space-between;
+}
+.block, .delUser{
+    width: 48%;
+    padding: 6px;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    color: white;
+    cursor: pointer;
+    outline: none;
+    transition: 0.7s;
+}
+.block:hover, .delUser:hover{
+    opacity: 0.6;
+}
+.block{
+    background-color: var(--cheese);
+}
+.delUser{
+    background-color: #f44336;
 }
 /* End User */
 
@@ -588,16 +612,28 @@ body{
     margin: 3px;
 }
 .approveDelete{
+<<<<<<< Updated upstream
     position: absolute;
+=======
+    position: fixed;
+>>>>>>> Stashed changes
     z-index: 10;
     background-color: rgba(255, 166, 0, 0.5);
     width: 100%;
     height: 100%;
+<<<<<<< Updated upstream
+=======
+    left: 0;
+>>>>>>> Stashed changes
     top: 0;
     bottom: 0;
     display: flex;
     justify-content: center;
     align-items: center;
+<<<<<<< Updated upstream
+=======
+    transition: 1s;
+>>>>>>> Stashed changes
 }
 .approveDelete #appDel{
     border-radius: 10px;
@@ -792,6 +828,7 @@ body{
         z-index: 100;
     }
     .navigator.active{
+        height: 100%;
         width: 100%;
         left: 0;
     }
@@ -814,8 +851,17 @@ body{
     .product img{
         width: 100%;
     }
+<<<<<<< Updated upstream
     .container-body .top {
         flex-direction: column;
+=======
+    .Add-item{
+        margin-top: 22px;
+    }
+    .container-body .top {
+        flex-direction: column;
+        align-items: center;
+>>>>>>> Stashed changes
         height: 100px;
     }
     .container-body .form form {

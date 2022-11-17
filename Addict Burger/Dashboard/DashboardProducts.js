@@ -45,7 +45,11 @@ products.map((element,i) => {
     
 });
 
+<<<<<<< Updated upstream
 console.log(products);
+=======
+console.log(products[1].name);
+>>>>>>> Stashed changes
 let newProducts = '';
 let allDelete = document.querySelectorAll('ion-icon.delete');
 let allEdit = document.querySelectorAll('ion-icon.edit');
@@ -53,11 +57,19 @@ let bodyProducts = document.querySelector('.body.products')
 console.log(allDelete)
 
 for(i=0;i<allDelete.length;i++){
+<<<<<<< Updated upstream
+=======
+  console.log(i)
+>>>>>>> Stashed changes
   allDelete[i].addEventListener('click', (e)=>{
     bodyProducts.insertAdjacentHTML('beforeend',
     `<div class="approveDelete" id="approveDelete">
     <div id="appDel">
+<<<<<<< Updated upstream
     <p>Delete <span id="itemName">Burger</span> Item?</p>
+=======
+    <p>Are you sure you want to delete <span id="itemName">${e.target.parentNode.querySelector(".info h2").innerText}</span>?</p>
+>>>>>>> Stashed changes
     <div id="faithButton">
         <span id="delete">Delete</span>
         <span id="close">Close</span>

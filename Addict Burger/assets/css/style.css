@@ -109,7 +109,7 @@ h6 {
 }
 
 #header.header-transparent {
-  background: transparent;
+    background: rgba(26, 24, 22, 0.4);
 }
 
 #header.header-scrolled {
@@ -129,6 +129,9 @@ h6 {
 #header .logo h1 a:hover {
   color: #fff;
   text-decoration: none;
+  text-shadow: 1px 4px black, 2px 5px red;
+  font-size: 1.5em;
+  cursor: pointer;
 }
 
 #header .logo img {
