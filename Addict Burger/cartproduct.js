@@ -7,7 +7,7 @@ $(document).ready(function(){
 var res=0;
  let x=parseInt($("#price").val());
  let y=parseInt($("#quantity").val());
-  var res=x*y;
+  res=x*y;
  $("#total").val(res);
 
 });
