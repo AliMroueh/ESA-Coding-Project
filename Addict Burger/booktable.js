@@ -55,7 +55,7 @@ document.getElementById("btn").onclick = () =>
         return false;
         
     }else {
-        window.location.href="finproceesing.html";
+        window.location.href="finBookTAble.html";
 
 }
     
