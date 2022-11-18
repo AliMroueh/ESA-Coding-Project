@@ -1,0 +1,40 @@
+:root{
+    --orange: #ffb03b;
+    --dark-black: #0c0b09; /*bck of the main page*/
+    --light-grey: rgba(255,255,255,0.8); /* color of card title */
+    --grey: #5f5950; /* color of contact */
+    --light-yellow: #cda45e; /* color of contact us */
+    --red-black: #1a1814; /* color of open section */
+    --dark-red: #ff6600; /* Day of the week */
+    --white-yellow: #ffcc99; /* number of hours open */
+    --cheese:#ffa600;
+    --transparent-black: rgba(26,24,22,0.85) /* bck of navbar when scrolled */
+}
+table {
+    border-collapse: collapse;
+    width: 70%;
+    margin: 50px;
+    flex-wrap: wrap;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even){background-color: #f2f2f2}
+  
+  th {
+    background-color: #ffa600;
+    color: white;
+  }
+  tr{
+    text-align: center;
+  }
+  .button2{
+    outline-width: none;
+    border: none;
+    padding: 10px;
+    border-radius:10px;
+    color:white;
+  }
