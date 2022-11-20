@@ -37,11 +37,12 @@ main.classList.toggle('active')
 }
 
 let Delivery = localStorage.getItem('delivery');
-console.log(Delivery)
+// console.log(Delivery)
 
 // get old data
+if(Delivery){
 let old_data = JSON.parse(localStorage.getItem("delivery"));
-console.log(old_data)
+// console.log(old_data)
 
 old_data.forEach(element => bodyTwo.insertAdjacentHTML('beforeend', 
 `<div class="country_flex">
@@ -52,7 +53,7 @@ old_data.forEach(element => bodyTwo.insertAdjacentHTML('beforeend',
 ))
 
 delete_item();
-
+}
 
 const check_before_add = () => {
   if(bodyTwo.children.length != 0){
