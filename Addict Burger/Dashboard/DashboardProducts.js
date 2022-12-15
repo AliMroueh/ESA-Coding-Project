@@ -45,7 +45,7 @@ products.map((element,i) => {
     
 });
 
-console.log(products[1].name);
+// console.log(products[1].name);
 let newProducts = '';
 let allDelete = document.querySelectorAll('ion-icon.delete');
 let allEdit = document.querySelectorAll('ion-icon.edit');

@@ -31,10 +31,16 @@
   <!-- Template Main CSS File -->
 
   <link href="assets/css/style.css" rel="stylesheet">
+<<<<<<< HEAD:Addict Burger/takeaway.php
   <link href="delivery.css" rel="stylesheet">
 
   
 
+=======
+  <!-- <link rel="stylesheet" href="style.css"> -->
+  <link rel="stylesheet" href="likedItems.css">
+  <link rel="stylesheet" href="styleMobile.css">
+>>>>>>> 33629790bf85bbafe0dc44333594efe674bd8fca:Addict Burger/likedItems.html
 </head>
 <style>
 
@@ -48,7 +54,11 @@
       <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
   
         <div class="logo me-auto">
+<<<<<<< HEAD:Addict Burger/takeaway.php
           <h1><a href="index.html"><h2>Addict Burger</h2></a></h1>
+=======
+          <h1><a href="index.html">Addict Burger</a></h1>
+>>>>>>> 33629790bf85bbafe0dc44333594efe674bd8fca:Addict Burger/likedItems.html
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
         </div>
@@ -74,8 +84,89 @@
   
       </div>
     </header>
+<<<<<<< HEAD:Addict Burger/takeaway.php
     <main>
   
+=======
+    <!-- End Header -->
+    
+    <!-- Start Liked Item -->
+    <!-- Top Selling -->
+    <div class="col-11">
+      <div class="card top-selling overflow-auto">
+
+        <div class="filter">
+          <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
+            <li class="dropdown-header text-start">
+              <h6>Filter</h6>
+            </li>
+
+            <li><a class="dropdown-item" href="#">Today</a></li>
+            <li><a class="dropdown-item" href="#">This Month</a></li>
+            <li><a class="dropdown-item" href="#">This Year</a></li>
+          </ul>
+        </div>
+
+        <div class="card-body pb-0">
+          <h5 class="card-title">Top Liked <span>| Today</span></h5>
+
+          <table class="table table-borderless">
+            <thead>
+              <tr>
+                <th scope="col">Preview</th>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Likes</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row"><a href="#"><img src="assets/img/specials-1.jpg" alt=""></a></th>
+                <td><a href="#" class="text-primary fw-bold">Spagetti</a></td>
+                <td>$20</td>
+                <td class="fw-bold">124</td>
+                
+              </tr>
+              <tr>
+                <th scope="row"><a href="#"><img src="assets/img/specials-2.jpg" alt=""></a></th>
+                <td><a href="#" class="text-primary fw-bold">Cheese Burger</a></td>
+                <td>$15</td>
+                <td class="fw-bold">98</td>
+                
+              </tr>
+              <tr>
+                <th scope="row"><a href="#"><img src="assets/img/specials-3.jpg" alt=""></a></th>
+                <td><a href="#" class="text-primary fw-bold">Fish Burger</a></td>
+                <td>$10</td>
+                <td class="fw-bold">74</td>
+               
+              </tr>
+              <tr>
+                <th scope="row"><a href="#"><img src="assets/img/specials-4.jpg" alt=""></a></th>
+                <td><a href="#" class="text-primary fw-bold">Salads</a></td>
+                <td>$7</td>
+                <td class="fw-bold">63</td>
+              
+              </tr>
+              <tr>
+                <th scope="row"><a href="#"><img src="assets/img/specials-5.jpg" alt=""></a></th>
+                <td><a href="#" class="text-primary fw-bold">Double Burger</a></td>
+                <td>$17</td>
+                <td class="fw-bold">41</td>
+                
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+      </div>
+    </div><!-- End Top Selling -->
+
+    <!-- End Liked Item -->
+>>>>>>> 33629790bf85bbafe0dc44333594efe674bd8fca:Addict Burger/likedItems.html
 
 <!-- ======= take away Section ======= -->
 
@@ -158,7 +249,11 @@
 </main>
  <!-- Vendor JS Files -->
 
+<<<<<<< HEAD:Addict Burger/takeaway.php
  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+=======
+ 
+>>>>>>> 33629790bf85bbafe0dc44333594efe674bd8fca:Addict Burger/likedItems.html
 
 
  <!-- Template Main JS File -->

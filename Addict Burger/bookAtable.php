@@ -46,7 +46,11 @@
       <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
   
         <div class="logo me-auto">
+<<<<<<< HEAD:Addict Burger/bookAtable.php
           <h1><a href="index.html"><h2>Addict Burger</h2></a></h1>
+=======
+          <h1><a href="index.html">Addict Burger</a></h1>
+>>>>>>> 33629790bf85bbafe0dc44333594efe674bd8fca:Addict Burger/bookAtable.html
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
         </div>

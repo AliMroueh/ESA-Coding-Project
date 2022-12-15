@@ -1,0 +1,97 @@
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display:block; 
+    border:1px solid black;
+    background-color: white;
+    padding-top: 20px;
+    width:30%;
+    border-radius: 10px;
+    
+    
+}
+#Fname,#Lname,#Email,#pass,#conf,#check,#prvlbl,#Up,#lbAlr{
+    display:block;
+    margin-left: 20px;
+    border-radius: 8px;
+}
+#Fname,#Lname{display: inline;
+height: 25px;
+width: 200px;
+font-weight: bold;
+font-size:15px;
+}
+#check,#prvlbl{display: inline;
+    margin-left: 1px;
+}
+#lbUp,#lbQuest{display: block;
+padding-top: 5px;
+margin-left: 20px;
+margin-top: 10px;
+}
+#hr1{
+    border:1px solid gray;
+}
+#Email{
+    margin-top: 20px;
+    height: 25px;
+   
+    font-weight: bold;
+    font-size:15px;
+
+}
+#pass{margin-top: 20px;
+    height: 25px;
+   
+    font-weight: bold;
+    font-size:15px;
+
+}
+#conf{margin-top: 20px;
+    height: 25px;
+    
+    font-weight: bold;
+    font-size:15px;
+
+}
+#Up{margin-top: 20px;
+margin-bottom: 35px ;
+height:35px;
+width:150px;
+font-weight:bold;
+font-size: 20px;
+
+}
+#check{margin-top: 20px;
+    margin-left: 20px;}
+    
+    #lbAlr{
+        padding-left: 635px;
+        
+    }
+    #lbUp{
+        font-weight: bold;
+        color:black;
+        font-size:35px;
+    }
+    #lbQuest{
+        
+        color:gray;
+        font-size:20px;
+    }
+    body{
+        background: url(Burger2.jpg) no-repeat center fixed; 
+             
+        background-size: cover;
+
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #SignUp{
+        margin-top:10%;
+    }
+    

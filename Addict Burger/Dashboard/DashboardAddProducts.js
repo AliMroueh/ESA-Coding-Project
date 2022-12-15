@@ -16,7 +16,7 @@ let ext = JSON.parse(localStorage.getItem("extra"));
 //   window.location.replace("file:///C:/Users/MYCOM/Desktop/Esa%20coding%20files/Addict%20Burger/Dashboard/DashboardCategory.html");
 // }
 // console.log(all)
-console.log(ext)
+// console.log(ext)
 const btn = document.querySelector(".container-body .form form .addIngrd button");
 const txt = document.querySelector(".container-body .form form .addIngrd input");
 let typeCategories = document.querySelector('.typeCategories');
@@ -111,7 +111,7 @@ element.onclick = (e) => {
   three.classList.toggle('disabled');
   four.classList.toggle('disabled'); 
   if(sex.innerText == 'Foods'){
-    console.log('Foods')
+    // console.log('Foods')
     typeCategories.innerHTML = '';
     for(i=0;i<all.food_cat.length;i++){
         typeCategories.insertAdjacentHTML('beforeend',
@@ -170,7 +170,7 @@ let button = document.getElementById('button');
 // }
 // }
 // }
-
+var formData = new FormData();
 const preview = () =>{
   let imageContainer = document.getElementById('images');
   // empty imageContainer
@@ -201,6 +201,14 @@ const preview = () =>{
 
   for(i=0;i<fileInput.files.length;i++){
 
+    console.log(fileInput.files[i])
+    formData.append('file_to_upload', fileInput.files[i]);
+    console.log(formData)
+
+    // Display the key/value pairs
+for (var pair of formData.entries()) {
+  console.log(pair[0]+ ', ' + pair[1]); 
+}
   let reader = new FileReader();
 
   reader.onload = () => {
@@ -215,13 +223,14 @@ const preview = () =>{
     <span style="transform: rotateY(calc(${x}* ${360/fileInput.files.length}deg)) translateZ(200px);"><img src="${reader.result}" alt=""></span>
     `)
     }
+    console.log(reader)
   }
   // readAsDataURL(blob) – read the binary data and encode it as base64 data url.
   reader.readAsDataURL(fileInput.files[i]);
+  // reader.readAsArrayBuffer(fileInput.files[i])
   }
   images.appendChild(slider);
   button.insertAdjacentElement('beforebegin', images)
-
   }
   }
 
@@ -274,9 +283,9 @@ let check = false;
 theExtras = [];
 
 for(i=1;i<=ingredients.children.length;i++){
-  console.log(ingredients.childNodes[i].innerHTML);
+  // console.log(ingredients.childNodes[i].innerHTML);
   check = ingredients.childNodes[i].innerHTML.includes('activate');
-  console.log(check);
+  // console.log(check);
   eachIngreds.allowDeny = check;
   eachIngreds.name = ingredients.childNodes[i].innerHTML.slice(0,ingredients.childNodes[i].innerHTML.indexOf('<span'));
   ingredients_li.push({name:ingredients.childNodes[i].innerHTML.slice(0,ingredients.childNodes[i].innerHTML.indexOf('<span')),
@@ -285,8 +294,8 @@ allowDeny:check})
 
 if(typeExtra.children.length > 0){
   for(i=1;i<=typeExtra.children.length;i++){
-    console.log(typeExtra.childNodes[i].innerHTML.slice(0,typeExtra.childNodes[i].innerHTML.indexOf('<span>')));
-    console.log(typeExtra.childNodes[i].innerHTML.slice(typeExtra.childNodes[i].innerHTML.indexOf('>')+1,typeExtra.childNodes[i].innerHTML.indexOf('</span>')))
+    // console.log(typeExtra.childNodes[i].innerHTML.slice(0,typeExtra.childNodes[i].innerHTML.indexOf('<span>')));
+    // console.log(typeExtra.childNodes[i].innerHTML.slice(typeExtra.childNodes[i].innerHTML.indexOf('>')+1,typeExtra.childNodes[i].innerHTML.indexOf('</span>')))
     theExtras.push({name: typeExtra.childNodes[i].innerHTML.slice(0,typeExtra.childNodes[i].innerHTML.indexOf('<span>')),
   price: typeExtra.childNodes[i].innerHTML.slice(typeExtra.childNodes[i].innerHTML.indexOf('>')+1,typeExtra.childNodes[i].innerHTML.indexOf('</span>'))})
 
@@ -298,16 +307,16 @@ Images.push(Allimages[x].src)
 }
 
 let obj={
-id: new Date().valueOf(),
+// id: new Date().valueOf(),
 name: Name,
 price: Price,
 ingredients: ingredients_li,
 category:{name:Category,type:catType},
-extras:theExtras,
-images: Images,
+extras: theExtras,
+images: formData,
 numReview: 0,
 numOrders: 0,
-love: 0
+// love: 0
 };
 
 // if there is no save at start then save an empty array
@@ -327,17 +336,53 @@ if(old_data[y].name == obj.name){
 }
 
 // if the name is not already exist then add it to local storage or data base
+console.log(obj)
 if(name_not_exist){
     old_data.push(obj);
     // save the old + new data to local storage
     let new_data = JSON.stringify(old_data);
     localStorage.setItem("products",new_data);
-    window.location.href = "DashboardProducts.html";
-}
+console.log(formData)
+  const save = async () => {
+try{
+   const res = await fetch('http://localhost/addictBurger/products.php', {
+      mode: 'no-cors',
+    method: 'POST',
+    body: JSON.stringify(obj),
+    headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        "Access-Control-Allow-Origin" : "*", 
+        "Access-Control-Allow-Credentials" : true 
+    },
+})
+const output = await res.json();
+// console.log(output)
+// .then(response => 
+  // {
+//   if (!response.ok) {
+//   throw new Error('Bad status code from server.');
+// }
 
+// return response.json(); 
+// response.json()
+// console.log(response.json())
+// response.end()
+// }
+// )
+// .then(response => console.log(JSON.stringify(response)))
+    // window.location.href = "DashboardProducts.html";
+// }
+// }
+}
+catch(error){
+  console.log( "error" + error.message)
 }
 }
-
+save();
+}
+}
+}
 
 // Admin select box
 const selector_extra = document.querySelector('.container-body .top .category.extra .selector');
@@ -411,3 +456,4 @@ function del(){
 }
 del()
 
+// console.log(JSON.stringify({ "name": "Amin", "age": "20", "country": "lebanon" }))

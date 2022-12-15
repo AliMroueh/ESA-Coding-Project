@@ -2131,8 +2131,8 @@
   function getUAString() {
     var uaData = navigator.userAgentData;
 
-    if (uaData != null && uaData.brands) {
-      return uaData.brands.map(function (item) {
+    if (uaData != null && uaDatAddict Burgerrands) {
+      return uaDatAddict Burgerrands.map(function (item) {
         return item.brand + "/" + item.version;
       }).join(' ');
     }
