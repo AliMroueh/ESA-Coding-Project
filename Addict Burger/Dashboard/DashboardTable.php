@@ -87,7 +87,7 @@
             </div>
             <!-- End topbar -->
             <!-- Start body -->
-            
+<!--             
                     <div class="tableAdmin">
                         <h2>Table</h2>
                         <table>
@@ -321,8 +321,21 @@
                     
                     </table>
                     </div>
+                </div> -->
+                <div class="container1" id="table-dark">
+                    <table class="table table-striped" id="data-table">
+                        <!-- <tr>
+                            <th>Time Slot</th>
+                            <th>Date</th>
+                            <th>Person</th>
+                            <th>Table Number</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                            <th>Assign Table</th>
+                        </tr> -->
+                    </table>
+                    
                 </div>
-            
 
             <!-- End body -->
         </div>

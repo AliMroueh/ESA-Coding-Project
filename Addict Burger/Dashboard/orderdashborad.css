@@ -8,3 +8,6 @@ color:white;
 th{
     text-align: center;
 }
+.container{
+    overflow: auto;
+  }

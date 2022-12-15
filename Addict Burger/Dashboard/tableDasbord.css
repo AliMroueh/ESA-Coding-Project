@@ -38,3 +38,10 @@ table {
     border-radius:10px;
     color:white;
   }
+  .container1{
+    overflow: auto;
+  }
+  #table-dark{
+
+    overflow: auto;
+  }

@@ -1,0 +1,40 @@
+.shopping-cart-wrapper{
+  margin-top: 15px;
+  padding: 20px;
+
+
+}
+.totals .totals-item{
+  width: 100%;
+  margin-bottom: 10px;
+}
+.totals .totals-item label{
+  width: 79%;
+  text-align: right;
+}
+.totals-value{
+  width: 21%;
+  text-align: right;
+}
+.totals-item-total{
+  font-family: font-bold;
+}
+.totals-item-total {
+  font-family: font-bold;
+}
+
+.checkout{
+  border: 0;
+  margin-top: 20px;
+  padding: 6px 25px;
+  background-color: rgb(240, 108, 20);
+  color: #fff;
+  font-size: 25px;
+  border-radius: 20px;
+  
+  justify-items: center;
+}
+
+.checkout:hover{
+  background-color: rgb(175, 219, 175);
+}

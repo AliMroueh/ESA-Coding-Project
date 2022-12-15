@@ -46,7 +46,7 @@
       <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
   
         <div class="logo me-auto">
-          <h1><a href="index.html">A.B</a></h1>
+          <h1><a href="index.html"><h2>Addict Burger</h2></a></h1>
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
         </div>
@@ -121,6 +121,7 @@
       </div>
      
       <br>
+      <br>
       <div class="text-center" ><button type="button" style="background :#ff6600;border-radius:20px; border-color: rgb(223, 116, 17);outline:none;" id="btn">Process</button></div>
     
      
@@ -172,6 +173,8 @@
 
   <!-- Template Main JS File -->
   <script src="booktable.js"></script>
+  <script src="js/bookAtable.js"></script>
+  
  
 
    

@@ -1,0 +1,21 @@
+
+
+
+.container{
+
+    justify-content: center;
+    padding: 150px;
+    margin: auto;
+
+    background-color: white;
+
+}
+
+.pagination pagination-center-lg{
+justify-content: center;
+}
+.pagination{
+    text-align: center;
+    justify-content: center;
+    
+}

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="Dashboard.css"/>
-    <link rel="stylesheet" href="orderdashborad.css"/>
+    <!-- <link rel="stylesheet" href="orderdashborad.css"/> -->
     <link rel="stylesheet" href="tableDasbord.css"/>
 </head>
 <body>
@@ -88,7 +88,7 @@
             </div>
             <!-- End topbar -->
             <!-- Start body -->
-            <div>
+            <!-- <div>
                 <div class="container-body ">
                        <div class="orderadmin">
                         <h2>Orders</h2>
@@ -251,10 +251,32 @@
         </div>
     </div>
 
-            <!-- End body -->
-        </div>
+            <End body -->
+                <div class="container" id="table-dark">
+                    <table class="table table-striped" id="data-table">
+                    
+                        <!-- <thead>
+                            <td>OrderId</td>
+                            <td>status</td>
+                            <td>orderType</td>
+                            <td>customerName</td>
+                            <td>timeOrder</td>
+                            <td>phoneNumber</td>
+                            <td>dateDelivery</td>
+                            <td>address</td>
+                            <td>city</td>
+                            <td>deliveryPrice</td>
+                            <td>nbOfTable</td>
+                            <td>message</td>
+                        </thead> -->
+                
+                   </table>
+                </div>
+         </div>  
+       
+
     </div>
-    <script src="DashboardTable.js"></script>
+    <script src="DashboardOrders.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

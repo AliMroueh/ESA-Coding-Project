@@ -35,7 +35,7 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <div class="logo me-auto">
-        <h1><a href="index.html">A.B</a></h1>
+        <h1><a href="index.html"><h2>Addict Burger</h2></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
       </div>
@@ -50,7 +50,7 @@
           <li><a class="nav-link scrollto" href="bookAtable.html">Book A Table</a></li>
           <li  style="margin-right: 125px;"><a class="nav-link scrollto" href="#orders">Orders</a></li>
           <li><a class="nav-link scrollto" href="likedItems.html"><i class="bi bi-heart"></i></a></li>
-          <li><a class="nav-link scrollto" href="cartItems.html"><i class="bi bi-cart3"></i></a></li>
+          <li><a class="nav-link scrollto" href="cartProduct.html"><i class="bi bi-cart3"></i></a></li>
         </ul>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>

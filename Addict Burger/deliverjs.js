@@ -1,6 +1,4 @@
 
-
-
 document.getElementById("btn").onclick = () =>
 {
     let First =document.forms["myform"]["fname"].value;
@@ -57,4 +55,79 @@ document.getElementById("btn").onclick = () =>
 }
     
 
-}
+ }
+
+
+// const productDelivery = JSON.parse(localStorage.getItem('products'));
+// console.log(productDelivery);
+// let prodtName=document.textContent=productDelivery.price[1];
+// console.log(prodtName)
+
+// // $("productDelivery").each(async function() {
+
+// // let productName1 = JSON.parse(localStorage.getItem('title'));
+// // let productPrice = JSON.parse(localStorage.getItem.price('productDelivery'));
+// // let productQuantity = JSON.parse(localStorage.getItem.quantity ('productDelivery'));
+// // let productTotal =  JSON.parse(localStorage.getItem.total('productDelivery'));
+// // console.log(productPrice);
+
+// // });
+
+// let products1 = {};
+// if (localStorage.getItem("products")) {
+//     products1 = JSON.parse(localStorage.getItem("products"));
+// }
+
+// let tbody = document.getElementById("tbody");
+
+// for (let id in products1) {
+//     let item = products1[id];
+
+//     let tr = document.createElement('tr')
+
+//     let title_td = document.createElement('td')
+//     title_td.textContent = item.title
+//     tr.appendChild(title_td)
+
+
+//     let price_td = document.createElement("td");
+//     price_td.textContent = item.price;
+//     tr.appendChild(price_td);
+
+//     let qty_td = document.createElement("td");
+//     qty_td.textContent = item.quantity;
+//     tr.appendChild(qty_td);
+
+//     let total_td = document.createElement("td");
+//     total_td.textContent = item.total;
+//     tr.appendChild(total_td);
+
+//     let extra_td = document.createElement("td");
+//     extra_td.textContent = item.extra;
+//     tr.appendChild(extra_td);
+
+//     let without_td = document.createElement("td");
+//     without_td.textContent = item.without;
+//     tr.appendChild(without_td);
+ 
+    
+//     tbody.appendChild(tr)
+
+// }
+
+
+
+// $countext= count($arrayExtra);
+//         for($i=0; $i<$countext; $i++){
+//             $extId=$arrayExtra[$i];
+//             try{
+//                 $con->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//                 $sql = "INSERT INTO `products_extras`(product_Id, extra_Id)  VALUES ('$LAST_ID', '$extId')";
+//                 $con->exec($sql);
+
+//             }catch(PDOException $e){
+//                 echo $e->getMessage();
+//             }
+//             }
+//             // echo json_encode($arrayExtra);
+        

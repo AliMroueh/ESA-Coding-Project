@@ -2,9 +2,7 @@
 
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -29,30 +27,55 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/stylecss.css" rel="stylesheet">
 
-  <link href="assets/css/stylewalaa.css" rel="stylesheet">
+  <!-- <link href="assets/css/stylewalaa.css" rel="stylesheet"> -->
   <link href="delivery.css" rel="stylesheet">
 
- 
 
 </head>
 <style>
-  /*
- body{
-  background-image: url(media/dlv3.jpg);
-  padding: 25px;
-  background-repeat: no-repeat;
-
-  background-size: cover;
-
- }*/
   ::placeholder{color:red;}
-  .remarq{display:none;color: red;}
-  
+ .remarq{display:none;color: red;}
 </style>
-<body>
 
+<body>
+     <!-- ======= Header ======= -->
+     <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+      <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
   
+        <div class="logo me-auto">
+          <h1><a href="index.html"><h2>Addict Burger</h2></a></h1>
+          <!-- Uncomment below if you prefer to use an image logo -->
+          <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+  
+        <nav id="navbar" class="navbar order-last order-lg-0">
+          <ul>
+            <li><a class="nav-link scrollto active" href="#video">Home</a></li>
+            <li><a class="nav-link scrollto" href="#menu">Menu</a></li>
+            <li><a class="nav-link scrollto" href="#aboutus">About us</a></li>
+            
+            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+            <li><a class="nav-link scrollto" href="bookAtable.html">Book A Table</a></li>
+            <li  style="margin-right: 125px;"><a class="nav-link scrollto" href="#orders">Orders</a></li>
+            <li><a class="nav-link scrollto" href="likedItems.html"><i class="bi bi-heart"></i></a></li>
+            <li><a class="nav-link scrollto" href="cartProduct.html"><i class="bi bi-cart3"></i></a></li>
+  
+          </ul>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+  
+        <a href="#book-a-table" class="book-a-table-btn scrollto">Log In</a>
+  
+      </div>
+    </header>
+    <main>
+    <!-- End Header -->
+
+   
   
 
 <!-- ======= delivery section Section ======= -->
@@ -108,7 +131,7 @@
         <div class="bordertotal" style="background-color:#ff6600;">
         <div class="form-group mt-5">
                   <hr>
-                  <p>Total <span class="price" style="background-color: black; color:gray"><b>63$</b></span></p>
+                 <!--<p>Total <span class="price" style="background-color: black; color:gray"><b>63$</b></span></p>-->
            
                  
             
@@ -125,9 +148,28 @@
   </section><!-- End Delivery Section -->
 
 
-   <!-- Start footer -
-   <footer id="footer">
-    <div class="container">
+
+  <!-- <table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th>total</th>
+            <th>extra</th>
+            <th>without</th>
+            <th>totalfinal</th>
+        </tr>
+    </thead>
+    <tbody id="tbody">
+
+    </tbody>
+</table> -->
+
+
+    <!-- Start footer -->
+  <footer id="footer">
+    <div class="container1 mt-5">
       <h3>Addict burger</h3>
       <p>Addict burger is fast food restaurant.First branch Nabtieh mahmoud fakih street,Second branch beirut near Shark sweat</p>
       <div class="social-links">
@@ -148,8 +190,9 @@
         Designed by <a href="https://bootstrapmade.com/">ESA Coding Lab groupe Cycle 3</a>
       </div>
     </div>
-  </footer>->
+  </footer>
   <!-- End Footer -->
+</main>
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
  
@@ -165,7 +208,21 @@
 
  <!-- Template Main JS File -
  <script src="assets/js/main.js"></script>-->
-
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+  <script  src="./js/scriptProductItem.js"></script>
+  <script  src="./js/scrip1cartItem.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
  <script src="deliverjs.js"></script>
 
 

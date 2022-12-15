@@ -1,14 +1,20 @@
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+  <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleMobile.css">
     <title>Document</title>
-  <!-- <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon"> -->
+    <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Poppins:300,300i,400,400i,600,600i,700,700i|Satisfy|Comic+Neue:300,300i,400,400i,700,700i" rel="stylesheet">
@@ -23,19 +29,26 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
+
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="delivery.css" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="styleMobile.css">
+  
+
 </head>
-<body>
+<style>
 
+  
+    ::placeholder{color:red;}
+  .remarq{display:none;color: red;}
+</style>
+<body>
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top d-flex align-items-center header-transparent">
       <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
   
         <div class="logo me-auto">
-          <h1><a href="index.html">A.B</a></h1>
+          <h1><a href="index.html"><h2>Addict Burger</h2></a></h1>
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
         </div>
@@ -47,12 +60,11 @@
             <li><a class="nav-link scrollto" href="#aboutus">About us</a></li>
             
             <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-
             <li><a class="nav-link scrollto" href="bookAtable.html">Book A Table</a></li>
             <li  style="margin-right: 125px;"><a class="nav-link scrollto" href="#orders">Orders</a></li>
             <li><a class="nav-link scrollto" href="likedItems.html"><i class="bi bi-heart"></i></a></li>
             <li><a class="nav-link scrollto" href="cartItems.html"><i class="bi bi-cart3"></i></a></li>
-
+  
           </ul>
           </ul>
           <i class="bi bi-list mobile-nav-toggle"></i>
@@ -62,11 +74,65 @@
   
       </div>
     </header>
-    <!-- End Header -->
+    <main>
+  
 
-  <!-- Start footer -->
-  <footer id="footer">
-    <div class="container">
+<!-- ======= take away Section ======= -->
+
+
+<section id="takeaway" class="takeaway">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 form-group">
+        <img  class="img1" src="media/takeaway1.jpg" value="" height="50%" >
+    </div>
+  </div>
+  <br>
+    <div class="container" data-aos="fade-up">
+      
+      <div class="section-title">
+        <h2>Take away</h2>
+       
+      </div>
+
+      <form name="myform" role="form"  data-aos="fade-up" data-aos-delay="100">
+        <div class="row">
+          <div class="col-lg-3 col-md-6 form-group">
+            <input type="text" name="fname" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            <p class="remarq">Please this is a required field</p>
+          </div>
+          <div class="col-lg-3 col-md-6 form-group mt-3 mt-md-0">
+            <input type="time" class="form-control" name="ftime" id="time" placeholder="Time" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            <p class="remarq">Please this is a required field</p>
+            
+          </div>
+          <div class="col-lg-3 col-md-6 form-group mt-3 mt-md-0">
+            <input type="text" class="form-control" name="fphone" id="phone" placeholder="Your Phone" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            <p class="remarq">Please this is a required field</p>
+          </div>
+          <div class="col-lg-3 col-md-6 form-group mt-3 mt-md-0">
+            <input type="date" name="fdate" class="form-control" id="date" placeholder="Date" data-rule="minlen:4" data-msg="Please enter at least 4 chars">
+            <p class="remarq">Please this is a required field</p>    <div class="validate"></div>
+          </div>
+          
+        </div>
+        <div class="form-group mt-3">
+          <textarea class="form-control" name="message" rows="5" placeholder="Message"></textarea>
+          
+        </div>
+       <br>
+
+       <div class="text-center" ><button type="button" style="background: #ff6600; border-radius:20px; border-color: rgb(223, 116, 17);outline:none;" id="btn">Process</button></div>
+      </form>
+
+    </div>
+  </div>
+  </section><!-- End take away Section -->
+
+
+   <!-- Start footer -->
+   <footer id="footer">
+    <div class="container1 ">
       <h3>Addict burger</h3>
       <p>Addict burger is fast food restaurant.First branch Nabtieh mahmoud fakih street,Second branch beirut near Shark sweat</p>
       <div class="social-links">
@@ -89,15 +155,15 @@
     </div>
   </footer>
   <!-- End Footer -->
+</main>
+ <!-- Vendor JS Files -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
- 
+ <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
 
-    <script src="script.js"></script>
-    <script src="assets/js/main.js"></script>
+ <!-- Template Main JS File -->
+ <script src="takeaway.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
-</body>
-</html>
+  </body>
+  </html>

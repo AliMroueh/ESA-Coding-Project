@@ -59,6 +59,8 @@ body{
 .container{
     position: relative;
     width: 100%;
+    scroll-margin: auto;
+    
 }
 .navigator{
     position: fixed;
