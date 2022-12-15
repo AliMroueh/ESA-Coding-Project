@@ -58,10 +58,10 @@
             <li><a class="nav-link scrollto" href="#aboutus">About us</a></li>
             
             <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-            <li><a class="nav-link scrollto" href="bookAtable.html">Book A Table</a></li>
+            <li><a class="nav-link scrollto" href="bookAtable.php">Book A Table</a></li>
             <li  style="margin-right: 125px;"><a class="nav-link scrollto" href="#orders">Orders</a></li>
-            <li><a class="nav-link scrollto" href="likedItems.html"><i class="bi bi-heart"></i></a></li>
-            <li><a class="nav-link scrollto" href="cartProduct.html"><i class="bi bi-cart3"></i></a></li>
+            <li><a class="nav-link scrollto" href="likedItems.php"><i class="bi bi-heart"></i></a></li>
+            <li><a class="nav-link scrollto" href="cartProduct.php"><i class="bi bi-cart3"></i></a></li>
   
           </ul>
           </ul>
